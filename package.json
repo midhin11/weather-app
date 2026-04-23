@@ -1,0 +1,38 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "A weather page which fetches real-time weather of any city from an API server and displays it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midhin11/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/midhin11/weather-app/issues"
+  },
+  "homepage": "https://github.com/midhin11/weather-app#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "css-loader": "^7.1.4",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.5.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.7",
+    "prettier": "^3.8.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.3",
+    "webpack-merge": "^6.0.1"
+  }
+}
