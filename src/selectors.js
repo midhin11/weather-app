@@ -1,3 +1,4 @@
+let body = document.body;
 let form = document.querySelector("form");
 let input = document.querySelector("input");
 let tempUnit = "metric";
@@ -24,4 +25,4 @@ let feelsLike = document.querySelector(".feels-like span")
 let pressure = document.querySelector(".pressure-val");
 let uv = document.querySelector(".uv > .with-svg > div");
 
-export {form, input, tempUnit, setTempUnit, switchUnit, errorText, loading, temp, description, condition, maxTemp, minTemp, precipitation, humidity, wind, windUnit, date, location, time, feelsLike, pressure, uv};
+export {body, form, input, tempUnit, setTempUnit, switchUnit, errorText, loading, temp, description, condition, maxTemp, minTemp, precipitation, humidity, wind, windUnit, date, location, time, feelsLike, pressure, uv};

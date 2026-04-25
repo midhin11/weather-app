@@ -1,6 +1,23 @@
 import "./styles.css";
-import {form, input, tempUnit, setTempUnit, switchUnit, errorText, loading, temp, description, condition, maxTemp, minTemp, precipitation, humidity, wind, windUnit, date, location, time, feelsLike, pressure, uv} from "./selectors.js"
+import { form, input, tempUnit, setTempUnit, switchUnit, errorText, loading, temp, description, condition, maxTemp, minTemp, precipitation, humidity, wind, windUnit, date, location, time, feelsLike, pressure, uv} from "./selectors.js"
 import { timeChanger, dateChanger } from "./display-functions.js";
+
+// async function gifFetch(url) {
+//     try{
+//         const response = await fetch(url);
+//         if(!response.ok){
+//             throw new Error(`Error status: ${response.status}`);
+//         }
+//         const returnedData = await response.json();
+//         body.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(${returnedData.data.images.original.url})`;
+//         body.style.backgroundSize = "contain";
+//         body.style.backgroundPosition = "center";
+//         body.style.backgroundRepeat = "no-repeat";
+//     } catch(err){
+//         console.error(err)
+//     }
+// }
+
 
 async function weatherFetch(url) {
     loading.textContent = "Loading weather data...";
@@ -10,8 +27,8 @@ async function weatherFetch(url) {
             throw new Error(`Error status: ${response.status}`);
         }
         const returnedData = await response.json();
-        loading.textContent = "";
         console.log(returnedData);
+        loading.textContent = "";
         printData(returnedData);
     } catch(err) {
         loading.textContent = "";
@@ -21,6 +38,8 @@ async function weatherFetch(url) {
 }
 
 function printData(weatherReport) {
+    // const conditionGIF = weatherReport.currentConditions.icon;
+    // gifFetch(`https://api.giphy.com/v1/gifs/translate?api_key=Your_key_here=${conditionGIF}`);
     if(tempUnit === "metric"){
         windUnit.textContent = "km/h"
     } 
