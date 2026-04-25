@@ -3,7 +3,7 @@ import {form, input, tempUnit, setTempUnit, switchUnit, errorText, loading, temp
 import { timeChanger, dateChanger } from "./display-functions.js";
 
 async function weatherFetch(url) {
-    loading.textContent = "Loading weather dateChanger...";
+    loading.textContent = "Loading weather data...";
     try{
         const response = await fetch(url);
         if(!response.ok){
